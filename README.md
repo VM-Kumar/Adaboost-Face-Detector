@@ -1,7 +1,7 @@
 # Ada-boost Face Detector
 **Goal:** To classify a given image as face image or non-face image. This method uses multiple weak features to obtain a strong feature to detect facial presence.
 
-![github_image1](https://user-images.githubusercontent.com/70597312/103395445-385eb900-4b54-11eb-8fb6-bff5290e43bd.PNG)
+![github_image](https://user-images.githubusercontent.com/70597312/103417924-b6ea4380-4bb2-11eb-9d09-e4a3422ddd09.png)
 
 The content is organized as follows:
 1. [description_report.pdf](https://github.com/VM-Kumar/Adaboost-Face-Detector/blob/main/description_report.pdf) : detailed description of the implementation of adaboost algorithm and results obtained on the chosen dataset.
