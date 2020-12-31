@@ -8,7 +8,8 @@ with open(r'C:\Users\venkatesh\Desktop\data\FDDB-folds','r') as file1:
 for i in range(len(Lines)):
     if Lines[i][0]=='1' and Lines[i][1]=='\n' and count<=1100:
         Lines[i-1] = Lines[i-1].rstrip("\n")
-        source='C:/Users/venkatesh/Desktop/data/{}.jpg'.format(str(Lines[i-1]))
+        # path to unannotated images folder
+        source='.................../data/{}.jpg'.format(str(Lines[i-1]))
         specs=Lines[i+1].split()
         major=int(float(specs[0]))
         minor=int(float(specs[1]))
@@ -31,11 +32,15 @@ for i in range(len(Lines)):
             final_face=img[x1:x2,y1:y2]
             final_nonface=img[0:100,0:100]
             if count<=1000:
-                str1='C:/Users/venkatesh/Desktop/data/dataset_face_train/im{}.jpg'.format(count)
-                str2='C:/Users/venkatesh/Desktop/data/dataset_nonface_train/im{}.jpg'.format(count)
+                #destination folder1: training face dataset
+                str1='..................../dataset_face_train/im{}.jpg'.format(count)
+                #destination folder2: training non-face dataset
+                str2='................./dataset_nonface_train/im{}.jpg'.format(count)
             else:
-                str1='C:/Users/venkatesh/Desktop/data/dataset_face_test/im{}.jpg'.format(count-1000)
-                str2='C:/Users/venkatesh/Desktop/data/dataset_nonface_test/im{}.jpg'.format(count-1000)
+                #destination folder3: test face dataset
+                str1='................/dataset_face_test/im{}.jpg'.format(count-1000)
+                #destination folder4: test non-face dataset
+                str2='............./dataset_nonface_test/im{}.jpg'.format(count-1000)
 ##            final_face=cv2.cvtColor(final_face,cv2.COLOR_RGB2GRAY)
 ##            final_nonface=cv2.cvtColor(final_nonface,cv2.COLOR_RGB2GRAY)
             final_face=cv2.resize(final_face,(20,20),interpolation=cv2.INTER_AREA)
