@@ -19,7 +19,8 @@ from skimage.feature import draw_haar_like_feature
 ########################### Extracting and storing face,nonface,training and testing images#########################
 img_face_train=[]
 for i in range(1000):
-    pat=r'C:\Users\venkatesh\Desktop\data\dataset_face_train\im{}.jpg'.format(i+1)
+    # path to 1000 images in face train data 
+    pat=r'...........................\dataset_face_train\im{}.jpg'.format(i+1)
     image=cv2.imread(pat)
     image=cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
     img_face_train.append(image)
@@ -28,7 +29,8 @@ img_face_train=np.array(img_face_train)
 
 img_face_test=[]
 for i in range(100):
-    pat=r'C:\Users\venkatesh\Desktop\data\dataset_face_test\im{}.jpg'.format(i+1)
+    # path to 100 images in face test data 
+    pat=r'...........................\dataset_face_test\im{}.jpg'.format(i+1)
     image=cv2.imread(pat)
     image=cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
     img_face_test.append(image)
@@ -37,7 +39,8 @@ img_face_test=np.array(img_face_test)
 
 img_nonface_train=[]
 for i in range(1000):
-    pat=r'C:\Users\venkatesh\Desktop\data\dataset_nonface_train\im{}.jpg'.format(i+1)
+    # path to 1000 images in non-face train data 	
+    pat=r'......................\dataset_nonface_train\im{}.jpg'.format(i+1)
     image=cv2.imread(pat)
     image=cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
     img_nonface_train.append(image)
@@ -46,7 +49,8 @@ img_nonface_train=np.array(img_nonface_train)
 
 img_nonface_test=[]
 for i in range(100):
-    pat=r'C:\Users\venkatesh\Desktop\data\dataset_nonface_test\im{}.jpg'.format(i+1)
+    # path to 100 images in non-face test data 	
+    pat=r'......................\dataset_nonface_test\im{}.jpg'.format(i+1)
     image=cv2.imread(pat)
     image=cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
     img_nonface_test.append(image)
